@@ -21,7 +21,8 @@ const Chatbot = () => {
     const [error, setError] = useState<string | null>(null);
     const messagesEndRef = useRef<HTMLDivElement>(null);
 
-    const API_URL = 'http://localhost:3001'; // Ajusta según tu configuración
+    //const API_URL = 'http://localhost:3001'; // local
+    const API_URL = import.meta.env.VITE_API_URL; // ya no apuntar a localhost
 
     const scrollToBottom = () => {
         messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
