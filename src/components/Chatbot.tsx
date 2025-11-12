@@ -34,7 +34,7 @@ const Chatbot = () => {
 
     const getAIResponse = async (userMessage: string) => {
         try {
-            //const response = await fetch(`${API_URL}/api/chat`, { **local**
+            //const response = await fetch(`${API_URL}/api/chat`, { //**local** lo unico que cambia por ahora con respecto al repo son las 2 // del inicio y este texto solo tiene va **local**
             const response = await fetch(`${import.meta.env.VITE_API_URL}/api/chat`, {
                 method: 'POST',
                 headers: {
